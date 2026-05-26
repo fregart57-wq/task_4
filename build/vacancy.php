@@ -20,7 +20,7 @@ while ($ob = $rsElement->GetNextElement()) {
     $key = '';
     foreach ($arKey as $part) {
         if (strlen($part) > 2) {
-            $key .= trim($part) . ' ';
+            $key .= trim($part) . ' vacancy.php';
         }
     }
     $key = trim($key);
