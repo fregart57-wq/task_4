@@ -55,20 +55,19 @@ if (($handle = fopen($CSV_PATH, "r")) !== false) {
         $row++;
         if ($row === 1) continue;
 
-        $PROP = [
-            'ACTIVITY'     => trim($data[8] ?? ''),
-            'FIELD'        => trim($data[11] ?? ''),
-            'OFFICE'       => trim($data[1] ?? ''),
-            'LOCATION'     => trim($data[2] ?? ''),
-            'REQUIRE'      => trim($data[4] ?? ''),
-            'DUTY'         => trim($data[5] ?? ''),
-            'CONDITIONS'   => trim($data[6] ?? ''),
-            'EMAIL'        => trim($data[12] ?? ''),
-            'TYPE'         => trim($data[9] ?? ''),
-            'SALARY_VALUE' => trim($data[7] ?? ''),
-            'SCHEDULE'     => trim($data[10] ?? ''),
-            'DATE'         => date('d.m.Y'),
-        ];
+        $PROP['ACTIVITY'] = $data[9];
+        $PROP['FIELD'] = $data[11];
+        $PROP['OFFICE'] = $data[1];
+        $PROP['LOCATION'] = $data[2];
+        $PROP['REQUIRE'] = $data[4];
+        $PROP['DUTY'] = $data[5];
+        $PROP['CONDITIONS'] = $data[6];
+        $PROP['EMAIL'] = $data[12];
+        $PROP['DATE'] = date('d.m.Y');
+        $PROP['TYPE'] = $data[8];
+        $PROP['SALARY_TYPE'] = '';
+        $PROP['SALARY_VALUE'] = $data[7];
+        $PROP['SCHEDULE'] = $data[10];
 
         foreach ($PROP as $code => &$value) {
             $value = trim(str_replace(["\n", "\r", "\t"], ' ', $value));
