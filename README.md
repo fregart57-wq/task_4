@@ -4,6 +4,6 @@
 ### Написать парсер, заполняющий иноблок элементами
 ### (Дополнительно) Парсер должен автоматически заолнять значения свойств типа "Список"
 
-<video src="https://github.com/user-attachments/assets/9a8bcc68-fba8-4247-a485-083e463d50cd" controls width="100%" style="max-width: 600px;">
+<video src="https://github.com/user-attachments/assets/b67920fd-76dd-40f0-bb5a-ee7053b9183d" controls width="100%" style="max-width: 600px;">
   Ваш браузер не поддерживает видео.
 </video># task_4
